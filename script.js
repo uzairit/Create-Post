@@ -14,8 +14,8 @@ document.getElementById('btn').addEventListener('click', function () {
         let fill = file.files[0]
         if (fill) {
             let url = URL.createObjectURL(fill)
-            box.innerHTML = `<div id="abc"><h1>${inp.value}</h1> <p>${text.value}</p></div> 
-                             <span>${time} ${date}</span> 
+            box.innerHTML = `<span>${time} ${date}</span> 
+                             <div id="abc"><h1>${inp.value}</h1> <p>${text.value}</p></div> 
                              <img src="${url}" alt="Uploaded Image">
                              <div class="icon-container">
                                 <i class="fas fa-heart"></i>
@@ -26,5 +26,6 @@ document.getElementById('btn').addEventListener('click', function () {
         } else {
             alert('Please upload an image!');
         }
+        main.innerHTML = ''
     })
 })
